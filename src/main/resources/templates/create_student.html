@@ -30,34 +30,38 @@
         <div class="container">
             <div class="row">
                 <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-                    <h1 class="text-center">Create New Student</h1>
+                    <h1 class="text-center">Creating New Student Entry</h1>
                     <div class="card-body">
-                        <form th:action="@{/students}" th:object = "${student}" method="POST">
+                      <!-- th:object defines an object to which the submitted data will be bound -->
+                      <!-- action is used to provide the form action url -->
+                        <form th:action="@{/students}" th:object = "${student}" method="POST"> 
+                          <!-- Method used is POST as we are entering data into DB -->
                             <div class="form-group">
-                                 <label>Student First Name</label>
+                                 <label>Student's First Name</label>
+                                 <!-- th:field used for binding input fields with a property in the bean -->
                                  <input type="text" 
                                         name="firstName" 
                                         th:field="*{firstName}" 
                                         class="form-control" 
-                                        placeholder = "Enter Student First Name"
+                                        placeholder = "Enter Student's First Name"
                                 />
                             </div>
                             <div class="form-group">
-                                <label>Student Last Name</label>
+                                <label>Student's Last Name</label>
                                 <input type="text" 
                                        name="lastName" 
                                        th:field="*{lastName}" 
                                        class="form-control" 
-                                       placeholder = "Enter Student Last Name"
+                                       placeholder = "Enter Student's Last Name"
                                />
                            </div>
                            <div class="form-group">
-                            <label>Student Email</label>
+                            <label>Student's Email</label>
                             <input type="text" 
                                    name="email" 
                                    th:field="*{email}" 
                                    class="form-control" 
-                                   placeholder = "Enter Student email"
+                                   placeholder = "Enter Student's email"
                            />
                             </div>
                             <div class="box-footer">

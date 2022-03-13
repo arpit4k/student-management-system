@@ -10,12 +10,12 @@ import net.javaguides.studentmanagementsystem.repository.StudentRepository;
 
 @SpringBootApplication
 public class StudentManagementSystemApplication implements CommandLineRunner {
-	
+	//Implements CLR - makes sure that the bean runs autmocatically and dynamically 
 	public static void main(String[] args) {
 		SpringApplication.run(StudentManagementSystemApplication.class, args);
 	}
-	@Autowired
-	private StudentRepository studentRepository;
+	@Autowired //The right depedency is injected with the help of this @ 
+	private StudentRepository studentRepository; //Instance of Student Repositpry is declared
 
 	@Override
 	public void run(String... args) throws Exception {

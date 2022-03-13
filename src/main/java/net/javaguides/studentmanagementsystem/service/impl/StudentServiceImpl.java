@@ -26,22 +26,23 @@ public class StudentServiceImpl implements StudentService {
     }
    @Override
     public Student saveStudent(Student student){
-        return studentRepository.save(student);
+        return studentRepository.save(student);  //Saves the data object by calling instance of student repository & save 
     }
 
     @Override
     public Student getStudentById(Long id){
-        return studentRepository.findById(id).get();
+        return studentRepository.findById(id).get(); //Retrieves value of student object w the help of id 
+        //and calls an instance of student repo to make the changes 
     }
 
     @Override
     public Student updateStudent(Student student){
-        return studentRepository.save(student);
+        return studentRepository.save(student); //saves in the repo 
     }
 
     @Override
     public void deleteStudentById(Long id){
-         studentRepository.deleteById(id);
+         studentRepository.deleteById(id); //Deletes in the repo
     }
 
 }
